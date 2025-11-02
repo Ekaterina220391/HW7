@@ -32,12 +32,13 @@ public class Main {
             remains=remains/100+dayNow;
             summPay--;
             if (remains%5==0) {
+                remains=remains+1;
 
                 continue;
             }
 
             System.out.println(remains);
-            remains=remains+1;
+
             }
 
 
