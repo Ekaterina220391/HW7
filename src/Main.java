@@ -24,27 +24,65 @@ public class Main {
 
 
         System.out.println("Задача 3");
-        int dayNow = 1;
+        int days = 0;
         int summPay = 1000;
-        int remains=0;
-        while (summPay>=1000) {
-            remains = summPay - 100;
-            remains=remains/100+dayNow;
-            summPay--;
-            if (remains%5==0) {
-                remains=remains+1;
-
+        int dayPay = 100;
+        while (summPay >= dayPay) {
+            days = days + 1;
+            if (days % 5 == 0) {
                 continue;
             }
-
-            System.out.println(remains);
-
+            summPay = summPay - dayPay;
+            System.out.println(days);
+        }
+        System.out.println("Задача 4");
+        int month = 0;
+        double total = 0;
+        while (total <= 12000000) {
+            month = month + 1;
+            total += 15000;
+            if (month % 6 == 0) {
+                total = total + total * 0.07;
+            }
+            if (total >= 12000000) {
+                break;
+            }
+                System.out.println("Сейчас " + month + " и сумма ваших накоплений = " + total);
+            }
+        System.out.println("Задача 5");
+        int charge= 20;
+        int minute =0;
+        int overheats=0;
+        while (charge<100 && overheats<=3){
+            minute=minute+1;
+            if (minute%10==0) {
+                overheats = overheats + 1;
+                minute = minute - 2;
+                continue;
+            }
+                System.out.println("Перегрев");
+            charge= charge+2;
+            System.out.println("Время зарядки составило " +minute + " минут");
+            if (overheats>=3){
+                System.out.println("Заряд досрочно остановлен");
+                break;
             }
 
 
 
-            }
+
+        }
+
+
+
+
+        }
+
+
     }
+
+
+
 
 
 
