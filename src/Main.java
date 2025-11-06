@@ -23,7 +23,7 @@ public class Main {
         }
 
 
-        System.out.println("Задача 3");
+        System.out.println("Задача 3.1");
         int days = 0;
         int summPay = 1000;
         int dayPay = 100;
@@ -35,6 +35,19 @@ public class Main {
             summPay = summPay - dayPay;
             System.out.println(days);
         }
+
+
+        System.out.println("Задача 3.2");
+
+        for (;summPay>=dayPay;summPay=summPay-100){
+            days=days+1;
+            if (days%5==0){
+                days=days+1;
+            }
+        }
+        System.out.println("Вам доступно  " + days + " дней парковки");
+
+
         System.out.println("Задача 4");
         int month = 0;
         double total = 0;
@@ -47,39 +60,44 @@ public class Main {
             if (total >= 12000000) {
                 break;
             }
-                System.out.println("Сейчас " + month + " и сумма ваших накоплений = " + total);
-            }
+            System.out.println("Сейчас " + month + " и сумма ваших накоплений = " + total);
+        }
+
+
         System.out.println("Задача 5");
-        int charge= 20;
-        int minute =0;
-        int overheats=0;
-        while (charge<100 && overheats<=3){
-            minute=minute+1;
-            if (minute%10==0) {
-                overheats = overheats + 1;
-                minute = minute - 2;
+        int charge = 20;
+        int minute = 0;
+        int overheats = 0;
+        while (charge < 100) {
+            minute++;
+            charge = charge + 2;
+            if (minute % 10 == 0) {
+                overheats++;
+                minute = minute + 2;
                 continue;
             }
-                System.out.println("Перегрев");
-            charge= charge+2;
-            System.out.println("Время зарядки составило " +minute + " минут");
-            if (overheats>=3){
-                System.out.println("Заряд досрочно остановлен");
+            if (overheats >= 3) {
+                System.out.println("Зарядка прекращена. Текущий заряд:" +charge);
                 break;
             }
-
-
-
-
+            System.out.println("Время зарядки составило " + minute + " минут");
         }
 
 
-
-
         }
-
 
     }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
