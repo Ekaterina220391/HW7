@@ -39,10 +39,10 @@ public class Main {
 
         System.out.println("Задача 3.2");
 
-        for (;summPay>=dayPay;summPay=summPay-100){
-            days=days+1;
-            if (days%5==0){
-                days=days+1;
+        for (; summPay >= dayPay; summPay = summPay - 100) {
+            days = days + 1;
+            if (days % 5 == 0) {
+                days = days + 1;
             }
         }
         System.out.println("Вам доступно  " + days + " дней парковки");
@@ -77,16 +77,16 @@ public class Main {
                 continue;
             }
             if (overheats >= 3) {
-                System.out.println("Зарядка прекращена. Текущий заряд:" +charge);
+                System.out.println("Зарядка прекращена. Текущий заряд:" + charge);
                 break;
             }
             System.out.println("Время зарядки составило " + minute + " минут");
         }
 
 
-        }
-
     }
+
+}
 
 
 
