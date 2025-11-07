@@ -44,11 +44,10 @@ public class Main {
         int day = 0;
         for (day = 0; sum >= pay; ) {
             day++;
-            sum = sum - pay;
             if (day % 5 == 0) {
-                sum = sum + pay;
                 continue;
             }
+            sum = sum - pay;
         }
         System.out.println("Вам доступно  " + day + " дней парковки");
 
