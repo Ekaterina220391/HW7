@@ -33,19 +33,25 @@ public class Main {
                 continue;
             }
             summPay = summPay - dayPay;
-            System.out.println(days);
+
         }
+        System.out.println(days);
 
 
         System.out.println("Задача 3.2");
-
-        for (; summPay >= dayPay; summPay = summPay - 100) {
-            days = days + 1;
-            if (days % 5 == 0) {
-                days = days + 1;
+        int pay = 100;
+        int sum = 1000;
+        int day = 0;
+        for (day = 0; sum >= pay; ) {
+            day++;
+            sum = sum - pay;
+            if (day % 5 == 0) {
+                sum = sum + pay;
+                continue;
             }
         }
-        System.out.println("Вам доступно  " + days + " дней парковки");
+        System.out.println("Вам доступно  " + day + " дней парковки");
+
 
 
         System.out.println("Задача 4");
@@ -62,26 +68,28 @@ public class Main {
             }
             System.out.println("Сейчас " + month + " и сумма ваших накоплений = " + total);
         }
-
-
         System.out.println("Задача 5");
         int charge = 20;
         int minute = 0;
         int overheats = 0;
         while (charge < 100) {
-            minute++;
+            minute = minute + 1;
             charge = charge + 2;
-            if (minute % 10 == 0) {
+            if (minute % 10 == 0 ) {
                 overheats++;
+                if (overheats>3){
+                    System.out.println("Зарядка прекращена. Текущий заряд:" +charge);
+                    break;
+                }
                 minute = minute + 2;
                 continue;
             }
-            if (overheats >= 3) {
-                System.out.println("Зарядка прекращена. Текущий заряд:" + charge);
-                break;
-            }
-            System.out.println("Время зарядки составило " + minute + " минут");
+
         }
+        System.out.println("Время зарядки составило " + minute + " минут");
+
+
+
 
 
     }
